@@ -71,11 +71,15 @@ namespace Osz2Decryptor
             
             Read(File.OpenRead(path));
         }
+        
+        public Osz2Package() {
+        
+        }
 
         /// <summary>
         /// Reads the metadata of .osu files that osz2 contains
         /// </summary>
-        private void Read(Stream file)
+        public void Read(Stream file)
         {
             var reader = new BinaryReader(file);
 
